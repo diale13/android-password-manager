@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.ispass">
+
+    <uses-permission android:name="android.permission.USE_BIOMETRIC" />
+<<<<<<< HEAD
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camara" />
+    <uses-feature android:name="android.hardware.camara.autofocus" />
+=======
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+>>>>>>> webapi_connection
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ISPass">
+        <activity android:name=".ui.CaptureQrActivity"
+            android:screenOrientation="fullSensor"
+            android:stateNotNeeded="true"
+            android:windowSoftInputMode="stateAlwaysHidden"
+            ></activity>
+        <activity
+            android:name=".ui.ScanActivity"
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.ProfileActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.UpdatePasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.AddPasswordActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.UpdateNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.AddNoteActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.AuthenticationActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.ExportPasswordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.AnalyzeSecurityActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.PasswordsActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.NotesActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.HomeActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar" />
+        <activity
+            android:name=".ui.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.ISPass.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

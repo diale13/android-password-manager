@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:gravity="center_horizontal"
+    android:id="@+id/layout_scan"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:orientation="vertical"
+    tools:context=".ui.ScanActivity">
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_scan_activity"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="SCAN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="307dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:maxHeight="10px"
+        android:src="@drawable/ic_baseline_qr_code_scanner_24"
+        app:tint="@color/white" />
+
+    <Button
+        android:id="@+id/btn_scan"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="390dp"
+        android:backgroundTint="#0063f4"
+        android:gravity="center"
+        android:text="SCAN QR"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_text_size" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar_profile_activity"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/toolbar_scan_home"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_baseline_home_24"
+            app:tint="@color/black" />
+
+
+        <ImageView
+            android:id="@+id/toolbar_scan_exit"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            app:tint="@color/black" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

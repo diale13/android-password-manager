@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".ui.AuthenticationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_login_activity"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="LOGIN"
+            android:textColor="@color/black"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="AUTHENTICATION"
+        android:textStyle="bold"
+        android:textColor="#0063f4"
+        android:textSize="25dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/intro_text_marginStartEnd"
+        android:layout_marginTop="@dimen/intro_text_marginTop"
+        android:layout_marginEnd="@dimen/intro_text_marginStartEnd"
+        android:gravity="center"
+        android:lineSpacingExtra="@dimen/intro_text_line_spacing_extra"
+        android:text="Please use your fingerprint or write your password"
+        android:textColor="@color/white"
+        android:textSize="@dimen/intro_text_size" />
+
+    <ImageView
+        android:layout_width="307dp"
+        android:layout_height="225dp"
+        android:maxHeight="10px"
+        android:src="@drawable/ic_fingerprint"
+        app:tint="@color/white" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/authentication_screen_til_marginStartEnd"
+        android:layout_marginTop="@dimen/authentication_screen_til_marginTop"
+        android:layout_marginEnd="@dimen/authentication_screen_til_marginStartEnd">
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/et_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/black"
+            android:backgroundTint="@color/cardview_light_background"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:textSize="16sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_log_in_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/btn_marginStartEnd"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/btn_marginStartEnd"
+        android:backgroundTint="#0063f4"
+        android:textColor="@android:color/white"
+        android:gravity="center"
+        android:paddingTop="@dimen/btn_paddingTopBottom"
+        android:paddingBottom="@dimen/btn_paddingTopBottom"
+        android:text="Login with password"
+        android:textSize="15dp" />
+
+    <Button
+        android:id="@+id/btn_log_in_fingerprint"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/btn_marginStartEnd"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="@dimen/btn_marginStartEnd"
+        android:backgroundTint="@color/white"
+        android:textColor="@android:color/black"
+        android:gravity="center"
+        android:paddingTop="@dimen/btn_paddingTopBottom"
+        android:paddingBottom="@dimen/btn_paddingTopBottom"
+        android:text="Login with fingerprint"
+        android:textSize="15dp" />
+
+</LinearLayout>

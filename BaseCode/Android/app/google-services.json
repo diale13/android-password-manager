@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "25302175338",
+    "project_id": "isp-integration",
+    "storage_bucket": "isp-integration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25302175338:android:2ca8c72a6be72947118413",
+        "android_client_info": {
+          "package_name": "com.example.ispass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25302175338-mginhhsu50m0qni6j5nhelm14uqsv1cs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBIEEmrUdhGSvRSF-FPiVkp_SzSn04skRQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25302175338-mginhhsu50m0qni6j5nhelm14uqsv1cs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "e1101bb0-1c9b-4c27-bcc6-06b3bdfa719c",
+		"name": "ObligatorioISP",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\": \"TOKEN\",\r\n  \"accountModels\": [\r\n    {\r\n      \"userName\": \"admin2\",\r\n      \"password\": \"admin1\",\r\n      \"site\": \"adminFlix\",\r\n      \"email\": \"admin@admin.com\"\r\n    }\r\n  ],\r\n  \"mainEmail\": \"admin@admin.com\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create user test multiple same holders",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"deviceId\": \"12345\",\r\n  \"accountModels\": [\r\n        {\r\n            \"UserName\": \"admin1\",\r\n            \"Password\": \"admin1\",\r\n            \"Site\": \"adminFlix\",\r\n            \"Email\": \"admin@admin.com\"\r\n        },\r\n        {\r\n            \"UserName\": \"admin2\",\r\n            \"Password\": \"admin2\",\r\n            \"Site\": \"adminBook\",\r\n            \"Email\": \"admin2@admin.com\"\r\n        },\r\n        {\r\n            \"UserName\": \"admin3\",\r\n            \"Password\": \"admin3\",\r\n            \"Site\": \"adminGram\",\r\n            \"Email\": \"admin2@admin.com\"\r\n        }\r\n    ],\r\n  \"mainEmail\": \"admin@admin.com\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LogIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"admin@admin.com\",\r\n  \"password\": \"admin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/api/sessions",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"api",
+						"sessions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update user account list",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e16afcda-ad36-49f9-ba83-2fef6c3bd485",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"accountModels\": [\r\n        {\r\n            \"UserName\": \"admin1\",\r\n            \"Password\": \"admin1\",\r\n            \"Site\": \"adminFlix\",\r\n            \"Email\": \"admin@admin.com\"\r\n        },\r\n        {\r\n            \"UserName\": \"admin2\",\r\n            \"Password\": \"admin2\",\r\n            \"Site\": \"adminBook\",\r\n            \"Email\": \"admin2@admin.com\"\r\n        },\r\n        {\r\n            \"UserName\": \"admin3\",\r\n            \"Password\": \"admin3\",\r\n            \"Site\": \"adminGram\",\r\n            \"Email\": \"admin2@admin.com\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/users/accounts",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"users",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user new leaks",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "e16afcda-ad36-49f9-ba83-2fef6c3bd485",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaks/new",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaks",
+						"new"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get user leaks (all)",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "e16afcda-ad36-49f9-ba83-2fef6c3bd485"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaks/all",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaks",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post dummy leaks",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"type": "text",
+						"value": "cad474d7-124f-4921-a0cc-da87f5ff5887"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\"Site\": \"leakedbook\",\r\n\"Url\":\"https://www.cuartoLeak.com\",\r\n\"Email\":\"admin2@admin.com\"\r\n }\r\n \r\n \r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/leaks/dummy",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"leaks",
+						"dummy"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Accounts",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "3b5a66d6-4f7e-4849-a96d-47e882c529d2",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{url}}/api/exportedLists/zip",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"exportedLists",
+						"zip"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "http://localhost:5000"
+		},
+		{
+			"key": "Token",
+			"value": "1e429403-d47c-4397-a516-4c63e429a7ed"
+		}
+	]
+}

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/layout_note_main"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:background="#000000"
+    tools:context=".ui.AnalyzeSecurityActivity">
+
+    <ImageView
+        android:layout_width="307dp"
+        android:layout_height="225dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="150dp"
+        android:maxHeight="10px"
+        android:src="@drawable/ic_baseline_analytics_24"
+        app:tint="@color/white" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_analyze_activity"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/toolbar_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:text="ANALYZE SECURITY"
+            android:textColor="@color/black"
+            android:textSize="@dimen/toolbar_title_text_size"
+            android:textStyle="bold" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/btn_analyze_all"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="450dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#0063f4"
+        android:gravity="center"
+        android:text="Analyze all leaks"
+        android:textColor="@color/white"
+        android:textSize="@dimen/btn_text_size" />
+
+    <Button
+        android:id="@+id/btn_analyze_recent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginStart="60dp"
+        android:layout_marginEnd="60dp"
+        android:backgroundTint="#FFFFFF"
+        android:gravity="center"
+        android:text="Analyze latest leaks"
+        android:textColor="#000000"
+        android:textSize="@dimen/btn_text_size" />
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/bottom_toolbar_analyze_activity"
+        android:layout_width="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/toolbar_analyze_home"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:src="@drawable/ic_baseline_home_24"
+            app:tint="@color/black" />
+
+        <ImageView
+            android:id="@+id/toolbar_analyze_exit"
+            android:layout_width="80dp"
+            android:layout_height="30dp"
+            android:layout_gravity="right"
+            android:layout_marginRight="20dp"
+            android:src="@drawable/ic_baseline_exit_to_app_24"
+            app:tint="@color/black" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
